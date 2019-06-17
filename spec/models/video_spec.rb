@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Video, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#find_all' do
+    it 'test' do
+      result = Video.find_all
+      expect(result.class).to equal(String)
+    end
+  end
 end
