@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe VideosController, type: :controller do
-  describe '#index' do
-    it 'can get json format data.' do
+  describe 'GET #index' do
+    it 'has 204 status code.' do
       get :index
       expect(response.status).to eq(204)
     end
