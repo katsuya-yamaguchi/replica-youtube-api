@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2019_06_16_201127) do
 
-  create_table "videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "account"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title", limit: 255
+    t.string "account", limit: 255
     t.bigint "num_of_views", default: 0, null: false
-    t.string "url", null: false
+    t.string "url", limit: 255, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title", "account"], name: "index_videos_on_title_and_account", unique: true
