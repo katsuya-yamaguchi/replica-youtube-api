@@ -33,6 +33,7 @@ group :development, :test do
   gem 'devise_token_auth'
   gem 'rubocop'
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :development do
