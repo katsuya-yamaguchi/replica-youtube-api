@@ -9,7 +9,7 @@ namespace :setup_db do
       video.attributes = {
         title: Faker::App.name,
         account: Faker::Name.name,
-        url: '/' << Faker::Internet.slug
+        url: +'/' << Faker::Internet.slug
       }
       video.save!
     end
